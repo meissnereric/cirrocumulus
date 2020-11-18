@@ -132,14 +132,9 @@ Resources:
         Ref: BatchServiceRole
   BatchProcessS3Bucket:
     Type: AWS::S3::Bucket
-    DependsOn: BatchProcessBucketPermission
     Properties: 
       BucketName: 
           !Sub 'batch-processing-job-${AWS::AccountId}'
-      NotificationConfiguration:
-        LambdaConfigurations:
-        - Event: 's3:ObjectCreated:*'
-          Function: !GetAtt BatchProcessingLambdaInvokeFunction.Arn
   
   BatchProcessRepository: 
     Type: AWS::ECR::Repository

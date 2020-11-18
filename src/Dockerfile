@@ -1,6 +1,7 @@
-FROM pytorch
+FROM pytorch/pytorch
 
-COPY container_shell_script.sh train_model.py /
+
+COPY container_shell_script.sh train_model.py ./
 
 
 RUN pip install --upgrade pip && \
@@ -10,4 +11,5 @@ RUN pip install --upgrade pip && \
 RUN pwd
 RUN ls
 
+#CMD ["echo", "hello world"]
 CMD ["bash", "container_shell_script.sh"]
