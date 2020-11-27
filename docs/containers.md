@@ -47,3 +47,7 @@ We can run commands inside the container, such as the pip install steps here, wi
 The ```CMD``` keyword sets a default command that runs when the container is run, and can be overrided from the command line. We indicate here that, if not specified otherwise, that when the container is spun up it should run the ```container_shell_script.sh``` file using ```bash```.
 
 See the [Docker documentation](https://docs.docker.com/) for further information on commands and how to use them.
+
+
+## Warnings!!
+Please please please, be sure before you log off for the day and finish, that you verify all of the EC2 instances in your account are either shut down or terminated. If you leave them running, they cost a lot of money. Only the free tier instances (t2.micro) you can leave on all the time, but those you can't do real computations on. 

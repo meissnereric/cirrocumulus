@@ -157,6 +157,11 @@ Resources:
               - "ecr:InitiateLayerUpload"
               - "ecr:UploadLayerPart"
               - "ecr:CompleteLayerUpload"
+
+  MyQueue: 
+    Type: AWS::SQS::Queue
+    Properties: 
+      QueueName: "cloud-compute-sqs"
   
 Outputs:
   ComputeEnvironmentArn:
